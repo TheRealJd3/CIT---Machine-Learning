@@ -1,0 +1,59 @@
+https://www.kaggle.com/iabhishekofficial/mobile-price-classification
+
+
+
+1.Pre-processing your data
+
+				a.            Dealing with Outliers           
+
+				b.            Dealing with Missing Values (if applicable)
+
+				c.            Handling Categorical Data
+
+				d.            Scaling Data
+
+				e.            Handling Imbalance (if applicable)
+
+				f.            Feature Selection
+
+				g.            Dimensionality Reduction (only if you have a very high dimensional dataset)
+
+
+2.Build a wide range of basic models [for example up to 8 different ] (Use default parameters and build a large number of ML models) and evaluate their accuracy.
+
+ 
+
+3.Take the best performing models from step 2 (for example best 3 models) and perform hyper-parameter optimization to tune the model as best as possible.
+
+
+
+4.Next you should explore your chosen research area (for example this might be feature selection, outlier detection). You can use this to examine a broad range of associated techniques and evaluate the impact of your best performing models in Step 3.
+
+PLEASE NOTE
+))))))))))))))))))))))))))))))))))))
+
+First, nested cross fold validation is not necessary for this assignment. Nested can be very time consuming to run multiple times. Therefore, it will suffice to just use the normal cross fold validation accuracy values as you final accuracy values (even though they might there might be a slight positive bias). Given the short time scale for the project the use of nested cross fold  for all your final evaluation accuracy values could be too time consuming.
+
+ 
+
+Second, if you have a larger dataset and you find that the training and tuning process is taking prohibitively long, I have no problem with you reducing the overall size of the dataset to something more manageable. If you are going to do this please make it clear in your report that you have taken this action.
+))))))))))))))))))))))))))))))))))))))))))))))
+ 
+
+
+1.  https://telcit.zoom.us/recording/play/SQuZnQtdyDS0maNs5WCt1Cr5FxkyzAtAkUxk4R6XpVFQME3wwOAdbwG5rvNIeXE3?startTime=1573119865000
+2.  https://telcit.zoom.us/recording/play/ImRfPHSIku3H8QbcvBOpOxrKprfK7n3SdzujlfXoflq2hJ9xRBkfZJ30xS0OatKd?continueMode=true
+3.  https://telcit.zoom.us/recording/play/-vaMvbP8WLvCQQL74m3IF1Jsy0HF8PBkUYzK7fIL4gF1-y06z3jxaC_3vO4t0wa3?continueMode=true
+4.  https://telcit.zoom.us/recording/play/jGthjAgOnrv57GSZvG18l99nOMvyzmTRs9q6Hcy4BPfLCAKYAOcYmuZQLC5GCooj
+5.  https://telcit.zoom.us/recording/play/W5YM7o22Lk1VkxZTR5v94KdhpItRJZG7SXpSO5xoXpYXp2opU-4r2w4_YiZfKu7M?continueMode=true
+6.  https://telcit.zoom.us/recording/play/W5YM7o22Lk1VkxZTR5v94KdhpItRJZG7SXpSO5xoXpYXp2opU-4r2w4_YiZfKu7M?continueMode=true
+7.  https://telcit.zoom.us/recording/play/SzfuOS5cETw1DmgofxE1NhdFstveEVBy-MWYllDR4J8dyilSfEyM1AZkqUprCuDV?continueMode=true
+8.  https://telcit.zoom.us/recording/play/7upbdMHCa33HwEvXE7qumKGOlFovHM6ZDCeuonYJAMfe1iwFJbEhgmado23__OYW?startTime=1574432150000
+
+
+
+
+https://towardsdatascience.com/hyperparameter-tuning-the-random-forest-in-python-using-scikit-learn-28d2aa77dd74
+
+
+

@@ -1,0 +1,263 @@
+Missing Values in Train Data : 0
+#########Checking for Imbalance#######
+3    500
+2    500
+1    500
+0    500
+Name: price_range, dtype: int64
+#########End of Checking for Imbalance#######
+########## KNN #########
+
+KNN - Cross Val Mean : 0.4005000000000001 , Cross Val Std Dev : 0.021148285982556598
+
+########## END OF KNN #########
+
+########## Random Forest #########
+
+Random Forest - Cross Val Mean : 0.8784999999999998 , Cross Val Std Dev : 0.019500000000000017
+
+########## END OF Random Forest #########
+
+########## SVM #########
+
+SVM - Cross Val Mean : 0.8640000000000001 , Cross Val Std Dev : 0.026343879744639004
+
+########## END OF SVM #########
+
+########## Ridge #########
+
+Ridge - Cross Val Mean : 0.6014999999999999 , Cross Val Std Dev : 0.021685248442201457
+
+########## END OF Ridge #########
+
+########## SGD #########
+
+SGD - Cross Val Mean : 0.762 , Cross Val Std Dev : 0.019000000000000017
+
+########## END OF SGD #########
+
+########## Decision Tree #########
+
+Decision Tree - Cross Val Mean : 0.8344999999999999 , Cross Val Std Dev : 0.025927784324928337
+
+########## END OF Decision Tree #########
+
+########## GNB #########
+
+GNB - Cross Val Mean : 0.812 , Cross Val Std Dev : 0.014866068747318469
+
+########## END OF GNB #########
+
+########## XGBoost #########
+
+XGBoost - Cross Val Mean : 0.9090000000000001 , Cross Val Std Dev : 0.02009975124224178
+
+########## END OF XGBoost #########
+
+[17  5 19  1  3 18  9  7  4  2 14 10 15 16  6  8 11 12  0 13]
+KNN Max Accuracy : 0.8975
+Random Forest Max Accuracy : 0.9175000000000001
+SVM Max Accuracy : 0.942
+Ridge Max Accuracy : 0.6015
+SGD Max Accuracy : 0.7665
+Decision Tree Max Accuracy : 0.869
+GNB Max Accuracy : 0.8150000000000001
+XGBoost Max Accuracy : 0.9135
+Models ranked from best to worst : [('SVM', 0.942), ('Random Forest', 0.9175000000000001), ('XGBoost', 0.9135), ('KNN', 0.8975), ('Decision Tree', 0.869), ('GNB', 0.8150000000000001), ('SGD', 0.7665), ('Ridge', 0.6015)]
+Best models : ['SVM', 'Random Forest', 'XGBoost']
+$$$$$$$$$$$$$$$$$$$$$ BEGINNING SVM Hyperparameter optimization $$$$$$$$$$$$$$$$$$$$
+Best Parameters with SVM:
+{'C': 10, 'decision_function_shape': 'ovo', 'gamma': 'auto', 'kernel': 'linear'} with a score of  0.9629999999999999
+Finished running GridSearch on SVM in 21.32828402519226 seconds
+SVM Univariate Mean scores : 0.9629999999999999
+SVM Univariate Classification Report :
+               precision    recall  f1-score   support
+
+         0.0       0.97      0.98      0.98       500
+         1.0       0.95      0.95      0.95       500
+         2.0       0.96      0.94      0.95       500
+         3.0       0.97      0.98      0.98       500
+
+    accuracy                           0.96      2000
+   macro avg       0.96      0.96      0.96      2000
+weighted avg       0.96      0.96      0.96      2000
+
+SVM Univariate Confusion Matrix :
+ [[490  10   0   0]
+ [ 14 473  13   0]
+ [  0  13 472  15]
+ [  0   0   9 491]]
+End of SVM univariate feature selection with optimized hyperparameters
+The optimized model needs to select 4 features for embedded feature selection
+
+Result after Embedded Feature Selection for SVM :  0.9559999999999998
+SVM Embedded Feature Selection Confusion Matrix :
+ [[487  13   0   0]
+ [ 10 480  10   0]
+ [  0  16 464  20]
+ [  0   0  19 481]]
+SVM Embedded Feature Selection Classification Report :
+               precision    recall  f1-score   support
+
+         0.0       0.98      0.97      0.98       500
+         1.0       0.94      0.96      0.95       500
+         2.0       0.94      0.93      0.93       500
+         3.0       0.96      0.96      0.96       500
+
+    accuracy                           0.96      2000
+   macro avg       0.96      0.96      0.96      2000
+weighted avg       0.96      0.96      0.96      2000
+
+$$$$$$$$$$$$$$$$$$$$$ BEGINNING Random Forest Hyperparameter optimization $$$$$$$$$$$$$$$$$$$$
+Best Parameters with Random Forest:
+{'max_depth': 25, 'n_estimators': 1500} with a score of  0.8915
+Finished running GridSearch on Random Forest in 157.0145778656006 seconds
+Random Forest Univariate Mean scores : 0.8915
+Random Forest Univariate Classification Report :
+               precision    recall  f1-score   support
+
+         0.0       0.93      0.95      0.94       500
+         1.0       0.85      0.85      0.85       500
+         2.0       0.85      0.85      0.85       500
+         3.0       0.94      0.93      0.93       500
+
+    accuracy                           0.89      2000
+   macro avg       0.89      0.89      0.89      2000
+weighted avg       0.89      0.89      0.89      2000
+
+Random Forest Univariate Confusion Matrix :
+ [[473  27   0   0]
+ [ 37 424  39   0]
+ [  0  48 423  29]
+ [  0   0  37 463]]
+End of Random Forest univariate feature selection with optimized hyperparameters
+The optimized model needs to select 4 features for embedded feature selection
+
+Result after Embedded Feature Selection for Random Forest :  0.917
+Random Forest Embedded Feature Selection Confusion Matrix :
+ [[481  19   0   0]
+ [ 24 455  21   0]
+ [  0  28 437  35]
+ [  0   0  39 461]]
+Random Forest Embedded Feature Selection Classification Report :
+               precision    recall  f1-score   support
+
+         0.0       0.95      0.96      0.96       500
+         1.0       0.91      0.91      0.91       500
+         2.0       0.88      0.87      0.88       500
+         3.0       0.93      0.92      0.93       500
+
+    accuracy                           0.92      2000
+   macro avg       0.92      0.92      0.92      2000
+weighted avg       0.92      0.92      0.92      2000
+
+$$$$$$$$$$$$$$$$$$$$$ BEGINNING XGBoost Hyperparameter optimization $$$$$$$$$$$$$$$$$$$$
+Best Parameters with XGBoost:
+{'colsample_bytree': 1.0, 'gamma': 0.5, 'max_depth': 4, 'min_child_weight': 1, 'nthread': 4, 'subsample': 0.6} with a score of  0.9235
+Finished running GridSearch on XGBoost in 560.235021352768 seconds
+XGBoost Univariate Mean scores : 0.9235
+XGBoost Univariate Classification Report :
+               precision    recall  f1-score   support
+
+         0.0       0.96      0.96      0.96       500
+         1.0       0.90      0.91      0.90       500
+         2.0       0.89      0.88      0.89       500
+         3.0       0.95      0.94      0.94       500
+
+    accuracy                           0.92      2000
+   macro avg       0.92      0.92      0.92      2000
+weighted avg       0.92      0.92      0.92      2000
+
+XGBoost Univariate Confusion Matrix :
+ [[482  18   0   0]
+ [ 21 456  23   0]
+ [  0  35 439  26]
+ [  0   0  30 470]]
+End of XGBoost univariate feature selection with optimized hyperparameters
+The optimized model needs to select 4 features for embedded feature selection
+
+Result after Embedded Feature Selection for XGBoost :  0.9279999999999999
+XGBoost Embedded Feature Selection Confusion Matrix :
+ [[483  17   0   0]
+ [ 18 465  17   0]
+ [  0  32 441  27]
+ [  0   0  33 467]]
+XGBoost Embedded Feature Selection Classification Report :
+               precision    recall  f1-score   support
+
+         0.0       0.96      0.97      0.97       500
+         1.0       0.90      0.93      0.92       500
+         2.0       0.90      0.88      0.89       500
+         3.0       0.95      0.93      0.94       500
+
+    accuracy                           0.93      2000
+   macro avg       0.93      0.93      0.93      2000
+weighted avg       0.93      0.93      0.93      2000
+
+Argsort of features : [17 19  5  1  3 18  9  7  4 14  2 15 10 16  6  8 11 12  0 13]
+SVM optimized hyperparameter Max Accuracy : 0.9724999999999999
+Random Forest optimized hyperparameter Max Accuracy : 0.9205
+XGBoost optimized hyperparameter Max Accuracy : 0.9279999999999999
+Best number of features for greedy search: 7
+
+Result after Greedy/RFECV for SVM :  0.9739999999999999
+SVM Greedy/RFECV Confusion Matrix :
+ [[494   6   0   0]
+ [  7 484   9   0]
+ [  0  13 476  11]
+ [  0   0   6 494]]
+SVM Greedy/RFECV Classification Report :
+               precision    recall  f1-score   support
+
+         0.0       0.99      0.99      0.99       500
+         1.0       0.96      0.97      0.97       500
+         2.0       0.97      0.95      0.96       500
+         3.0       0.98      0.99      0.98       500
+
+    accuracy                           0.97      2000
+   macro avg       0.97      0.97      0.97      2000
+weighted avg       0.97      0.97      0.97      2000
+
+################## END OF GREEDY FEATURE SELECTION
+Best number of features for greedy search: 6
+
+Result after Greedy/RFECV for Random Forest :  0.9205
+Random Forest Greedy/RFECV Confusion Matrix :
+ [[479  21   0   0]
+ [ 28 450  22   0]
+ [  0  30 446  24]
+ [  0   0  34 466]]
+Random Forest Greedy/RFECV Classification Report :
+               precision    recall  f1-score   support
+
+         0.0       0.94      0.96      0.95       500
+         1.0       0.90      0.90      0.90       500
+         2.0       0.89      0.89      0.89       500
+         3.0       0.95      0.93      0.94       500
+
+    accuracy                           0.92      2000
+   macro avg       0.92      0.92      0.92      2000
+weighted avg       0.92      0.92      0.92      2000
+
+################## END OF GREEDY FEATURE SELECTION
+Best number of features for greedy search: 4
+
+Result after Greedy/RFECV for XGBoost :  0.9279999999999999
+XGBoost Greedy/RFECV Confusion Matrix :
+ [[483  17   0   0]
+ [ 18 465  17   0]
+ [  0  32 441  27]
+ [  0   0  33 467]]
+XGBoost Greedy/RFECV Classification Report :
+               precision    recall  f1-score   support
+
+         0.0       0.96      0.97      0.97       500
+         1.0       0.90      0.93      0.92       500
+         2.0       0.90      0.88      0.89       500
+         3.0       0.95      0.93      0.94       500
+
+    accuracy                           0.93      2000
+   macro avg       0.93      0.93      0.93      2000
+weighted avg       0.93      0.93      0.93      2000
+
+################## END OF GREEDY FEATURE SELECTION

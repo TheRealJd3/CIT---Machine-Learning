@@ -1,0 +1,185 @@
+#ALL CODE NOT NEEDED atm
+# May be useful later
+
+
+ # print("Random ForestCross Eval mean : {}, Cross Eval STD Dev. : {}".format(random_scores.mean(), random_scores.std()))
+    # print("KNN Cross EVal Mean : {}, Cross EVal Std Dev : {}".format(knn_scores.mean(), knn_scores.std()))
+    # print("SVM Cross EVal Mean : {}, Cross EVal Std Dev : {}".format(svm_scores.mean(), svm_scores.std()))
+    # print("Ridge Cross EVal Mean : {}, Cross EVal Std Dev : {}".format(ridge_scores.mean(), ridge_scores.std()))
+    # print("SGD Cross EVal Mean : {}, Cross EVal Std Dev : {}".format(sgd_scores.mean(), sgd_scores.std()))
+    # print("DTC Cross EVal Mean : {}, Cross EVal Std Dev : {}".format(dtc_scores.mean(), dtc_scores.std()))
+    # print("GNB Cross EVal Mean : {}, Cross EVal Std Dev : {}".format(gnb_scores.mean(), gnb_scores.std()))
+
+   #Accuracies
+    print("Random Forest Accuracy : {}".format(metrics.accuracy_score(random_prediction, class_test)))
+    print("KNN Accuracy : {}".format(metrics.accuracy_score(knn_prediction, class_test)))
+    print("SVM Accuracy : {}".format(metrics.accuracy_score(svm_prediction, class_test)))
+    print("Ridge Accuracy : {}".format(metrics.accuracy_score(ridge_prediction, class_test)))
+    print("SGD Accuracy : {}".format(metrics.accuracy_score(sgd_prediction, class_test)))
+    print("DTC Accuracy : {}".format(metrics.accuracy_score(dtc_prediction, class_test)))
+    print("GNB Accuracy : {}".format(metrics.accuracy_score(gnb_prediction, class_test)))
+
+# print("RANDOM CONFUSTION MATRIX\n")
+    # print(metrics.confusion_matrix(random_prediction, class_test))
+    # print("KNN CONFUSION MATRIX\n")
+    # print(metrics.confusion_matrix(knn_prediction, class_test))
+    # print("SVM CONFUSION MATRIX\n")
+    # print(metrics.confusion_matrix(svm_prediction, class_test))
+    # print("RIDGE CONFUSION MATRIX\n")
+    # print(metrics.confusion_matrix(ridge_prediction, class_test))
+    # print("SGD CONFUSION MATRIX\n")
+    # print(metrics.confusion_matrix(sgd_prediction, class_test))
+    # print("DTC CONFUSION MATRIX\n")
+    # print(metrics.confusion_matrix(dtc_prediction, class_test))
+    # print("GNB CONFUSION MATRIX\n")
+    # print(metrics.confusion_matrix(gnb_prediction, class_test))
+
+
+    # print("KNN CLASSIFICATION REPORT\n")
+    # print(metrics.classification_report(knn_prediction, class_test))
+    # print("RANDOM CLASSIFICATION REPORT\n")
+    # print(metrics.classification_report(random_prediction, class_test))
+    # print("SVM CLASSIFICATION REPORT\n")
+    # print(metrics.classification_report(svm_prediction, class_test))
+    # print("RIDGE CLASSIFICATION REPORT\n")
+    # print(metrics.classification_report(ridge_prediction, class_test))
+    # print("SGD CLASSIFICATION REPORT\n")
+    # print(metrics.classification_report(sgd_prediction, class_test))
+    # print("DTC CLASSIFICATION REPORT\n")
+    # print(metrics.classification_report(dtc_prediction, class_test))
+    # print("GNB CLASSIFICATION REPORT\n")
+    # print(metrics.classification_report(gnb_prediction, class_test))
+
+
+
+    def randomForest():
+    # results = []
+    # number_features = []
+    # argsort_features = np.argsort(random_fit.feature_importances_)
+    # # Need atleast one feature
+    # for i in range(len(argsort_features) - 1):
+    #     remove = argsort_features[:i + 1]
+    #     removedTrain = np.delete(Data_train, list(remove), axis=1)
+    #     removedTest = np.delete(Data_test, list(remove), axis=1)
+    #     knn_model = KNeighborsClassifier(n_neighbors=6)
+    #     knn_fit = knn_model.fit(removedTrain, class_train)
+    #     results.append(knn_model.score(removedTest, class_test))
+    #     number_features.append(len(remove))
+    #
+    # plt.figure()
+    # plt.xlabel("Number of features removed")
+    # plt.ylabel("KNN Accuracy")
+    # plt.plot(number_features, results)
+    # plt.show()
+    # param_grid = [{'n_neighbors': list(range(1, 51)), 'p': [1, 2, 3, 4, 5]}]
+    # clf = GridSearchCV(KNeighborsClassifier(), param_grid, cv=10)
+    # clf.fit(Data_train, class_train)
+    # print("Best Parameters:\n")
+    # print(clf.best_params_, 'with a score of ', clf.best_score_)
+    pass
+
+
+                      'min_samples_leaf': [1, 2, 4, 8],
+                  'min_samples_split': [2, 5, 10, 20],
+                  'max_features': ['auto', 'sqrt'],
+                  'bootstrap': [True, False],
+
+
+                  # #Cross-Fold Accuracies
+    # print("Random ForestCross Eval mean : {}, Cross Eval STD Dev. : {}".format(random_scores.mean(), random_scores.std()))
+    # print("KNN Cross EVal Mean : {}, Cross EVal Std Dev : {}".format(knn_scores.mean(), knn_scores.std()))
+    # print("SVM Cross EVal Mean : {}, Cross EVal Std Dev : {}".format(svm_scores.mean(), svm_scores.std()))
+    # print("Ridge Cross EVal Mean : {}, Cross EVal Std Dev : {}".format(ridge_scores.mean(), ridge_scores.std()))
+    # print("SGD Cross EVal Mean : {}, Cross EVal Std Dev : {}".format(sgd_scores.mean(), sgd_scores.std()))
+    # print("DTC Cross EVal Mean : {}, Cross EVal Std Dev : {}".format(dtc_scores.mean(), dtc_scores.std()))
+    # print("GNB Cross EVal Mean : {}, Cross EVal Std Dev : {}".format(gnb_scores.mean(), gnb_scores.std()))
+    # K Nearest Neighbours Classifier
+    # knn_name, knn_scores, knn_confusion_matrix, knn_classification = makeModel("KNN", data_train, data_test,
+    #                                                                            class_train, class_test)
+    # printClassificationData(knn_name, knn_scores, knn_confusion_matrix, knn_classification)
+    # # Random Forest Classifier
+    # rf_name, rf_scores, rf_confusion_matrix, rf_classification = makeModel("Random Forest", data_train, data_test,
+    #                                                                        class_train, class_test)
+    # printClassificationData(rf_name, rf_scores, rf_confusion_matrix, rf_classification)
+    # # Support Vector Machines Classifier
+    # svm_name, svm_scores, svm_confusion_matrix, svm_classification = makeModel("SVM", data_train, data_test,
+    #                                                                            class_train, class_test)
+    # printClassificationData(svm_name, svm_scores, svm_confusion_matrix, svm_classification)
+    # # Ridge Classification
+    # ridge_name, ridge_scores, ridge_confusion_matrix, ridge_classification = makeModel("Ridge", data_train, data_test,
+    #                                                                                    class_train, class_test)
+    # printClassificationData(ridge_name, ridge_scores, ridge_confusion_matrix, ridge_classification)
+    # # Stochastic Gradient Descent Classification
+    # sgd_name, sgd_scores, sgd_confusion_matrix, sgd_classification = makeModel("SGD", data_train, data_test,
+    #                                                                            class_train, class_test)
+    # printClassificationData(sgd_name, sgd_scores, sgd_confusion_matrix, sgd_classification)
+    # # Decision Tree Classifier
+    # dtc_name, dtc_scores, dtc_confusion_matrix, dtc_classification = makeModel("Decision Tree", data_train, data_test,
+    #                                                                            class_train, class_test)
+    # printClassificationData(dtc_name, dtc_scores, dtc_confusion_matrix, dtc_classification)
+    # # Gaussian Naive Bayes Classifier
+    # gnb_name, gnb_scores, gnb_confusion_matrix, gnb_classification = makeModel("GNB", data_train, data_test,
+    #                                                                            class_train, class_test)
+    # printClassificationData(gnb_name, gnb_scores, gnb_confusion_matrix, gnb_classification)
+    # # XGBoost
+    # xgb_name, xgb_scores, xgb_confusion_matrix, xgb_classification = makeModel("XGBoost", data_train, data_test,
+    #                                                                            class_train, class_test)
+    # printClassificationData(xgb_name, xgb_scores, xgb_confusion_matrix, xgb_classification)
+
+
+
+
+knn_param_grid = [{'n_neighbors ': range(1, 80), 'p':[1, 2, 3, 4, 5]} ,
+                            {'algorithm':['auto', 'ball_tree ', 'kd_tree ', 'brute'] } ]
+joblib.externals.loky.process_executor._RemoteTraceback:
+"""
+Traceback (most recent call last):
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\externals\loky\process_executor.py", line 418, in _process_worker
+    r = call_item()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\externals\loky\process_executor.py", line 272, in __call__
+    return self.fn(*self.args, **self.kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 567, in __call__
+    return self.func(*args, **kwargs)
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 225, in __call__
+    for func, args, kwargs in self.items]
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 225, in <listcomp>
+    for func, args, kwargs in self.items]
+  File "C:\Users\jason\AppData\Roaming\Python\Python37\site-packages\sklearn\model_selection\_validation.py", line 504, in _fit_and_score
+    estimator = estimator.set_params(**cloned_parameters)
+  File "C:\Users\jason\AppData\Roaming\Python\Python37\site-packages\sklearn\base.py", line 236, in set_params
+    (key, self))
+ValueError: Invalid parameter n_neighbors  for estimator KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
+                     metric_params=None, n_jobs=None, n_neighbors=5, p=2,
+                     weights='uniform'). Check the list of available parameters with `estimator.get_params().keys()`.
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:/Programming/CIT/Labs/ML/Assignment2/main.py", line 311, in <module>
+    main()
+  File "D:/Programming/CIT/Labs/ML/Assignment2/main.py", line 307, in main
+    optimize(model,data_train,class_train)
+  File "D:/Programming/CIT/Labs/ML/Assignment2/main.py", line 191, in optimize
+    knn_clf.fit(data_train, class_train)
+  File "C:\Users\jason\AppData\Roaming\Python\Python37\site-packages\sklearn\model_selection\_search.py", line 712, in fit
+    self._run_search(evaluate_candidates)
+  File "C:\Users\jason\AppData\Roaming\Python\Python37\site-packages\sklearn\model_selection\_search.py", line 1153, in _run_search
+    evaluate_candidates(ParameterGrid(self.param_grid))
+  File "C:\Users\jason\AppData\Roaming\Python\Python37\site-packages\sklearn\model_selection\_search.py", line 691, in evaluate_candidates
+    cv.split(X, y, groups)))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 934, in __call__
+    self.retrieve()
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\parallel.py", line 833, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "D:\ProgramData\Anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 521, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 432, in result
+    return self.__get_result()
+  File "D:\ProgramData\Anaconda3\lib\concurrent\futures\_base.py", line 384, in __get_result
+    raise self._exception
+ValueError: Invalid parameter n_neighbors  for estimator KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
+                     metric_params=None, n_jobs=None, n_neighbors=5, p=2,
+                     weights='uniform'). Check the list of available parameters with `estimator.get_params().keys()`.
+
+Process finished with exit code 1
